@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Practical Methods to Estimate Fabric Mechanics from Metadata</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="javascript/scroll.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <a id="top"></a>
+    <div id="wrapper">
+        <div id="header">
+            <div id="journal">Eurographics 2024</div>
+            <div id="title"><a href=""
+                    class="nounderline"><b>Practical Methods to Estimate Fabric Mechanics from Metadata</b><br></a>
+            </div>
+
+            <table id="authors">
+                <tbody>
+                    <tr>
+                        <td><a href="https://henardoel.github.io/henardoel/">Henar Domínguez-Elvira</a><span class="super">1,2</span>
+                        </td>
+                        <td>Alicia Nicas<span class="super">1</span>
+                        </td>
+                        <td><a href="https://gabrielcirio.gitlab.io/">Gabriel Cirio</a><span class="super">1</span>
+                        </td>
+                        <td><a href="https://sites.google.com/view/alejandrora">Alejandro Rodríguez</a><span class="super">1</span>
+                        </td>
+                        <td><a href="http://www.elenagarces.es/">Elena Garcés</a><span class="super">1,2</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" id="affiliation">
+                            <span class="super">1</span> SEDDI, Madrid, Spain
+                            <span class="super">2</span> Universidad Rey Juan Carlos, Madrid, Spain
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <a href="imgs/teaser.png"
+                class="nounderline"><img style="width:1100px" class="center"
+                    src="imgs/teaser.png" alt="Teaser"
+                    id="teaser"></a>
+
+
+
+            <table id="navigation">
+                <tbody>
+                    <tr>
+                        <td><a href="#news">News</a>
+                        </td>
+                        <td><a href="#abstract">Abstract</a>
+                        </td>
+                        <td><a href="#presentation">Presentation</a>
+                        </td>
+                        <td><a href="#results">Results</a>
+                        </td>
+                        <td><a href="#bibtex">Bibtex</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+        <div id="content">
+
+            <h1><a id="news">News</a></h1>
+            <ul>
+                <li><span class="italic">February, 2024 </span>: Accepted at <a href="https://eg2024.cyens.org.cy/">Eurographics 2024</a>!</li>
+                <li><span class="italic">February, 2024 </span>: Web launched.</li>
+            </ul>
+
+
+            <h1><a id="abstract" href="#top">Abstract</a></h1>
+            <p>
+                Estimating fabric mechanical properties is crucial to create realistic digital twins. Existing methods typically require testing physical fabric samples with expensive devices or cumbersome capture setups. In this work, we propose a method to estimate fabric mechanics just from known manufacturer metadata such as the fabric family, the density, the composition, and the thickness. Further, to alleviate the need to know the fabric family –which might be ambiguous or unknown for nonspecialists– we propose an end-to-end neural method that works with planar images of the textile as input. We evaluate our methods using extensive tests that include the industry standard Cusick and demonstrate that both of them produce drapes that strongly correlate with the ground truth estimates provided by lab equipment. Our method is the first to propose such a simple capture method for mechanical properties outperforming other methods that require testing the fabric in specific setups.
+
+        <h1><a id="resources" href="#top">Resources</a></h1>
+                <ul>
+                    <li><a target="_blank"
+                            href="https://arxiv.org/">Arxiv Link</a></li>
+                    <li><a target="_blank"
+                            href="files/paper1152.pdf">Preprint [PDF, 17.14MB]</a></li>
+                    <li><a target="_blank"
+                            href="files/paper1152_additional_material.pdf">Supplementary material [PDF, 46.5 MB]</a></li>
+                    <li><a target="_blank"
+                        href="https://drive.google.com/file/d/14JbDQVVwmyX_ckUBrqYI3ll-W2OEsPua/view?usp=sharing">Dataset [ZIP, 674.4 MB]</a></li>
+                </ul>
+
+
+
+
+                <h1><a id="results" href="#top">Results</a></h1>
+                <div id="resultssec">
+                    <a href="imgs/results_dress.png"
+                    class="nounderline">
+                    <img style="width:1100px" class="center"
+                        src="imgs/results_dress.png" alt="Teaser"
+                        id="results_img">
+                    </a>
+                    <p> We can see a dress made with two different materials: a black denim (265gsm, 75% cotton, 25% polyester), and a red interlock (146gsm,
+                        100% modal). Both materials were digitized using capture equipment (Ground Truth) and both of our methods (MECHMET and MECHIM).
+                        The images show how the black and red materials are significantly different from each other, while the three versions (Ground Truth,
+                        MECHMET and MECHIM) of each material are almost identical.</p>
+                    </div>
+
+                <h1><a id="bibtex" href="#top">Bibtex</a></h1>
+                <div id="bibtexsec">@article{dominguezelvira2024MechFromMet,
+                author = {Domínguez-Elvira, Henar and Nicas, Alicia and Cirio, Gabriel and Rodríguez, Alejandro and Garcés, Elena},
+                title = {Practical Methods to Estimate Fabric Mechanics from Metadata},
+                journal = {Eurographics},
+                year = {2024}
+                }</div>
+
+
+                
+
+                <h1><a id="acks" href="#top">Acknowledgements</a></h1>
+                <p>
+                    This work was funded in part by the Spanish Ministry of Science, Innovation and Universities (MCIN/AEI/10.13039/501100011033) and the European Union NextGenerationEU/PRTR programs through the TaiLOR project (CPP2021-008842). Dr. Elena Garces was partially supported by a Juan de la Cierva - Incorporacion Fellowship (IJC2020-044192-I).
+                </p>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
