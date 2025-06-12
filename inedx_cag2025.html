@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>3DGStrands: Personalized 3D Gaussian Splatting for Realistic Hair Representation and Animation</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="javascript/scroll.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <a id="top"></a>
+    <div id="wrapper">
+        <div id="header">
+            <div id="journal">Computer and Graphics 2025</div>
+            <div id="title"><a href=""
+                    class="nounderline"><b>3DGStrands: Personalized 3D Gaussian Splatting for Realistic Hair Representation and Animation</b><br></a>
+            </div>
+
+            <table id="authors">
+                <tbody>
+                    <tr>
+                        <td><a href="https://henardoel.github.io/henardoel/">Henar Domínguez-Elvira</a><span class="super">1,2</span>
+                        </td>
+                        <td><a href="https://henardoel.github.io/henardoel/">Mario Alfonso-Arsuaga</a><span class="super">1,2</span>
+                        </td>
+                        <td>Ana Barrueco<span class="super">1,2</span>
+                        </td>
+                        <td><a href="https://servicios.urjc.es/pdi/ver/marc.comino">Marc Comino-Trinidad</a><span class="super">2</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" id="affiliation">
+                            <span class="super">1</span> Arquimea Research Center, Tenerife, Spain
+                            <span class="super">2</span> Universidad Rey Juan Carlos, Madrid, Spain
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <a href="imgs/teaser.png"
+                class="nounderline"><img style="width:1100px" class="center"
+                    src="imgs/teaser_cag25.png" alt="Teaser"
+                    id="teaser"></a>
+
+
+
+            <table id="navigation">
+                <tbody>
+                    <tr>
+                        <td><a href="#news">News</a>
+                        </td>
+                        <td><a href="#abstract">Abstract</a>
+                        </td>
+                        <td><a href="#presentation">Presentation</a>
+                        </td>
+                        <td><a href="#results">Results</a>
+                        </td>
+                        <td><a href="#bibtex">Bibtex</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+
+
+        <div id="content">
+
+            <h1><a id="news">News</a></h1>
+            <ul>
+                <li><span class="italic">May, 2025 </span>: Accepted at <a href="https://www.sciencedirect.com/journal/computers-and-graphics">Computer and Graphics 2025</a>!</li>
+                <li><span class="italic">June, 2025 </span>: Attended and presented at <a href="https://www.eurographics.es/CEIG25/">CEIG 2025</a>!</li>
+                <li><span class="italic">June, 2025 </span>: Web launched.</li>
+            </ul>
+
+
+            <h1><a id="abstract" href="#top">Abstract</a></h1>
+            <p>
+                We introduce a novel method for generating a <b>personalized 3D Gaussian 
+                Splatting (3DGS) hair representation</b> from an unorganized set of photographs. 
+                Our approach begins by leveraging an out-of-the-shelf method 
+                to estimate a strand-organized point cloud representation of the hair. This 
+                point cloud serves as the foundation for constructing a 3DGS model that 
+                accurately preserves the hair's geometric structure while visually fitting the 
+                appearance in the photographs. Our model seamlessly integrates with the 
+                standard 3DGS rendering pipeline, enabling efficient volumetric rendering 
+                of complex hairstyles. Furthermore, we demonstrate the versatility of our 
+                approach by applying the <b>Material Point Method (MPM)</b> to simulate 
+                <b>realistic hair physics directly on the 3DGS model</b>, achieving lifelike hair animation. 
+                To the best of our knowledge, this is the first method to simulate 
+                hair dynamics within a 3DGS model. This work paves the way for future research 
+                that can leverage the flexible nature of 3DGS to fit more complex hair 
+                material models or enable physics properties estimation through dynamic tracking.
+            </p>
+
+            <div class="video-container">
+                <video width="80%" controls loop>
+                    <source src="videos/3dfs_supp_material_review.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+        <h1><a id="resources" href="#top">Resources</a></h1>
+                <ul>
+                    <li><a target="_blank"
+                            href="">Computer and Graphics Digital Library</a></li>
+                    <li><a target="_blank"
+                            href="files/">Preprint [PDF]</a></li>
+                </ul>
+
+
+
+
+                <h1><a id="results" href="#top">Results</a></h1>
+                <div id="resultssec">
+                    <a href="imgs/cag25/resultados_multiples_pelos_fondo_blanco_gt.png"
+                    class="nounderline">
+                    <img style="width:1100px" class="center"
+                        src="imgs/cag25/resultados_multiples_pelos_fondo_blanco_gt.png" alt="Teaser"
+                        id="results_img">
+                    </a>
+                    <p> Optimization of different 3DGS representations following our method. Each row 
+                        illustrates the optimization process of a scene at validation steps 0, 1000, 2000, 7000, 15000 
+                        and 30000, which is the final step, converging towards a photorealistic hair appearance. 
+                        The last column shows the ground-truth views.</p>
+
+                    <a href="imgs/cag25/resultados_ablation.png"
+                    class="nounderline">
+                    <img style="width:1100px" class="center"
+                        src="imgs/cag25/resultados_ablation.png" alt="Teaser"
+                        id="results_img">
+                    </a>
+                    <p> Comparison of experiments conducted with different optimizations of the 3DGS 
+                        model. For each column, the top row shows a training view, in which the left half shows 
+                        the distribution of Gaussians, and the right half shows the rendered result. The bottom 
+                        row provides a close-up of the 3DGS representation. Our final approach demonstrates 
+                        that the Gaussians are better aligned with the strands compared to other setups, and 
+                        their shape and size more accurately represent realistic hair.</p>
+                    </div>
+
+                <h1><a id="bibtex" href="#top">Bibtex</a></h1>
+                <div id="bibtexsec">@article {dominguezelvira20253DGStrands,
+                    journal = {Computer and Graphics},
+                    title = {{3DGStrands: Personalized 3D Gaussian Splatting for Realistic Hair Representation and Animation}},
+                    author = {Dominguez-Elvira, Henar and Alfonso-Arsuaga, Mario and Barrueco, Ana and Comino-Trinidad, Marc},
+                    year = {2025},
+                    publisher = {Elsevier},
+                    ISSN = {},
+                    DOI = {}
+                    }</div>
+
+
+                
+
+                <h1><a id="acks" href="#top">Acknowledgements</a></h1>
+                <p>
+                    We would like to thank Marcos Ernesto García Muñoz and Lorenzo Costábile Domínguez 
+                    for their invaluable assistance throughout the preparation of this article.
+                </p>
+
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

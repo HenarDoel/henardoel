@@ -222,8 +222,8 @@ li {
   margin: 15px 10
 }
 video {
-  width: 24%;
-  float: center;
-  margin-top: -2px;
-  margin-bottom: -2px;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
